@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /*  Google Font */
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    background-color: #222;
+    padding: 0.5em 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Main Content */
+main {
+    padding: 2em;
+}
+
+.content {
+    display: flex;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.course-work,
+.image-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.certificate {
+    background-color: #003366;
+    color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.filter-buttons button {
+    background-color: #ffd700;
+    color: #003366;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.course-list button {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #ddd;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.course-list button:hover {
+    background-color: #ffd700;
+    color: #003366;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+footer .flag {
+    font-size: 1.2em;
+}
