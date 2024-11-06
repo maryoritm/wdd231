@@ -52,6 +52,26 @@ nav ul li a:hover {
     color: #ffd700;
 }
 
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
 /* Main Content */
 main {
     padding: 2em;
