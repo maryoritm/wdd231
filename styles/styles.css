@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    /*  Google Font */
     background-color: #f4f4f4;
     color: #333;
 }
@@ -38,7 +37,6 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 2em;
-    background-color: #222;
     padding: 0.5em 0;
 }
 
@@ -133,7 +131,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em;
-    margin-top: 2em;
 }
 
 footer .flag {
