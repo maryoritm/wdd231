@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Membership Information - Timbuktu Chamber of Commerce">
+    <meta name="author" content="Maryori Torres">
+
+    <!-- Meta tags for Facebook Open Graph -->
+    <meta property="og:title" content="Membership - Timbuktu Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/chamber-logo.png">
+    <!-- Asegúrate de tener una imagen en la ruta correcta -->
+    <meta property="og:url" content="https://www.yourdomain.com/membership.html">
+    <meta property="og:description"
+        content="Joining the Timbuktu Chamber of Commerce provides numerous benefits to business owners in the city of Timbuktu.">
+
+    <!-- Title of the Page -->
+    <title>Membership - Timbuktu Chamber of Commerce</title>
+
+    <!-- Favicon for the site -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles/directory.css">
+</head>
+
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="membership.html">Membership</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Membership Benefits</h1>
+        <p>Joining the Timbuktu Chamber of Commerce provides numerous benefits to local businesses. These include
+            networking opportunities, marketing support, and access to exclusive business events.</p>
+        <p>Some of the key benefits are:</p>
+        <ul>
+            <li>Access to a wide network of business professionals</li>
+            <li>Marketing and advertising opportunities</li>
+            <li>Invitations to special events, workshops, and seminars</li>
+            <li>Exclusive discounts and offers from partner businesses</li>
+        </ul>
+        <p>To become a member, simply fill out the membership application form and choose from various membership
+            levels.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Timbuktu Chamber of Commerce | Last Modified: <span
+                id="last-modified"></span></p>
+        <p>Developed by Maryori Torres | WDD 231</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="scripts/directory.js"></script>
+
+    <script>
+        // Dynamic Current Year
+        document.getElementById("current-year").innerText = new Date().getFullYear();
+
+        // Last Modified Date
+        document.getElementById("last-modified").innerText = document.lastModified;
+    </script>
+</body>
+
+</html>
