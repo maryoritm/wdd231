@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veracruz Chamber of Commerce</title>
-    <meta name="description"
-        content="Veracruz Chamber of Commerce: Supporting local businesses and fostering economic growth in Veracruz.">
+    <meta name="description" content="Veracruz Chamber of Commerce: Supporting local businesses and fostering economic growth in Veracruz.">
     <meta name="author" content="Maryori Torres">
 
     <!-- Open Graph meta tags for social media -->
@@ -45,7 +44,6 @@
     </header>
 
     <main>
-        <!-- Home Section -->
         <section id="home">
             <h2>Welcome to the Veracruz Chamber of Commerce</h2>
             <div class="content-wrapper">
@@ -87,7 +85,6 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <div class="contact-info">
@@ -112,13 +109,10 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script>
-        // Dynamically insert the current year and last modified date
         document.getElementById('currentyear').textContent = new Date().getFullYear();
         document.getElementById('lastModified').textContent = document.lastModified;
 
-        // Toggle navbar for mobile
         const hamburgerMenu = document.getElementById('hamburger-menu');
         const navbar = document.getElementById('navbar');
         const navLinks = navbar.querySelectorAll('a');
@@ -127,7 +121,6 @@
             navbar.classList.toggle('active');
         });
 
-        // Close the menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navbar.classList.remove('active');
