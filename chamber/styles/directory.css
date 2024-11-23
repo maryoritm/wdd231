@@ -212,3 +212,189 @@ footer .social-icons img {
 footer .flag {
     font-size: 1.5rem;
 }
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    width: 100px;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .hamburger-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+    
+    header .hamburger-menu {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+/* Hero Section */
+#hero {
+    width: 100%;
+    height: 300px;
+    background: url('images/hero-image.jpg') center center/cover no-repeat;
+    position: relative;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+}
+
+/* Weather Section */
+.weather {
+    margin-top: 40px;
+}
+
+#weather-info p {
+    font-size: 1.2rem;
+}
+
+/* Spotlights Section */
+#spotlights {
+    margin-top: 40px;
+}
+
+.spotlight-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.business-card {
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.business-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.business-card h3 {
+    font-size: 1.6rem;
+    margin: 15px 0;
+}
+
+.business-card p {
+    font-size: 1.2rem;
+}
+
+.business-card a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+}
+
+footer .footer-right {
+    margin-top: 20px;
+}
+
+footer .footer-right p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        text-align: center;
+    }
+}
+/* Hero Section */
+#hero {
+    width: 100%;
+    height: auto;
+    background: url('images/hero-image.jpg') center center/cover no-repeat;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto; /* Makes the image scale proportionally */
+    max-height: 400px; /* You can adjust this to your desired max height */
+    object-fit: cover; /* Ensures the image covers the section without distorting */
+}

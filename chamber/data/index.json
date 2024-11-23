@@ -1,0 +1,24 @@
+[{
+    "name": "Sample Company One",
+    "address": "123 Business Rd, Cityville",
+    "phone": "(123) 456-7890",
+    "website": "https://samplecompany1.com",
+    "image": "images/company.webp",
+    "membership_level": "Gold"
+},
+{
+    "name": "Sample Company Two",
+    "address": "456 Market St, Townsville",
+    "phone": "(987) 654-3210",
+    "website": "https://samplecompany2.com",
+    "image": "images/company.webp",
+    "membership_level": "Silver"
+},
+{
+    "name": "Sample Company Three",
+    "address": "789 Commerce Ave, Cityville",
+    "phone": "(555) 123-4567",
+    "website": "https://samplecompany3.com",
+    "image": "images/company.webp",
+    "membership_level": "Platinum"
+}]
