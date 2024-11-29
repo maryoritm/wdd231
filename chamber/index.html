@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veracruz Chamber of Commerce</title>
-  <meta name="description" content="Veracruz Chamber of Commerce: Supporting local businesses and fostering economic growth in Veracruz.">
+  <title>Veracruz Chamber of Commerce - Home</title>
+  <meta name="description"
+    content="Veracruz Chamber of Commerce: Supporting local businesses and fostering economic growth in Veracruz.">
   <meta name="author" content="Maryori Torres">
-  
+
+  <!-- Open Graph meta tags for social media -->
   <meta property="og:title" content="Veracruz Chamber of Commerce">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/social-share.png">
   <meta property="og:url" content="https://veracruzchamber.com/index.html">
-  
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/directory.css">
+  <link rel="stylesheet" href="styles/index.css">
+
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
+
 <body>
   <header>
     <div class="header-content">
@@ -30,156 +37,86 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+      <!-- Hamburger button for mobile -->
+      <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">
+        &#9776;
+      </button>
     </div>
   </header>
 
   <main>
+
+
     <section id="hero">
-      <img src="images/company.webp" alt="Veracruz Chamber of Commerce" class="hero-image">
-    </section>
-  </main>
-  
-
-    <section id="home">
       <h2>Welcome to the Veracruz Chamber of Commerce</h2>
+      <img src="images/company.webp" alt="Veracruz Chamber of Commerce" class="hero-image">
+      <p>Join us to connect, grow, and succeed in Veracruz.</p>
+      <a href="#join" class="cta-button">Join Now</a>
+   </section>
+   
 
-      <div class="content-wrapper">
-        <!-- Call to Action -->
-        <div class="cta">
-          <h3>Join Our Chamber</h3>
-          <p>Grow your business and connect with others in the community.</p>
-          <a href="#join" class="join-button">Join Now</a>
-        </div>
+    <!-- Current Events Section -->
+    <section id="events">
+      <h2>Current Events</h2>
+      <p>Stay tuned for our upcoming business workshops and networking events!</p>
+    </section>
 
-        <!-- Current Events -->
-        <div class="events">
-          <h3>Upcoming Events</h3>
-          <p>Check out our latest business networking events!</p>
-        </div>
-
-        <!-- Weather Section -->
-        <div class="weather">
-          <h3>Current Weather</h3>
-          <div id="weather-info"></div>
-          <div id="forecast"></div>
-        </div>
+    <!-- Weather Section -->
+    <section id="weather">
+      <h2>Current Weather in Veracruz</h2>
+      <div id="weather-info">
+        <p>Loading weather data...</p>
       </div>
+    </section>
 
-      <!-- Company Spotlights -->
-      <section id="spotlights">
-        <h2>Featured Businesses</h2>
-        <div class="spotlight-cards" id="spotlight-cards"></div>
-      </section>
+    <!-- Company Spotlights Section -->
+    <section id="spotlights">
+      <h2>Business Spotlights</h2>
+      <div class="spotlight-cards" id="spotlight-cards">
+        <!-- Dynamically generated member spotlight cards will appear here -->
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-content">
-        <div class="contact-info">
-            <address>
-                Veracruz Chamber of Commerce<br>
-                1234 Commerce Blvd, Veracruz, Veracruz 91900
-            </address>
-            <p>Email: info@veracruzchamber.com</p>
-            <p>Phone: (555) 123-4567</p>
-        </div>
-        <div class="social-icons">
-            <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon"></a>
-            <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon"></a>
-            <a href="https://linkedin.com"><img src="images/linkedin.png" alt="LinkedIn icon"></a>
-        </div>
-        <div class="footer-right">
-            <p>WDD231 Class Project</p>
-            <p>Veracruz Chamber of Commerce</p>
-            <p>&copy; <span id="currentyear"></span> Maryori Torres <span class="flag">🇲🇽</span> Mexico</p>
-            <!-- Fecha y hora actual -->
-            <p>Current Date & Time: <span id="currentDateTime"></span></p>
-        </div>
+      <div class="contact-info">
+        <address>
+          Veracruz Chamber of Commerce<br>
+          1234 Commerce Blvd, Veracruz, Veracruz 91900
+        </address>
+        <p>Email: info@veracruzchamber.com</p>
+        <p>Phone: (555) 123-4567</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon"></a>
+        <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon"></a>
+        <a href="https://linkedin.com"><img src="images/linkedin.png" alt="LinkedIn icon"></a>
+      </div>
+      <div class="footer-right">
+        <p>WDD231 Class Project</p>
+        <p>Veracruz Chamber of Commerce</p>
+        <p>&copy; <span id="currentyear"></span> Maryori Torres <span class="flag">🇲🇽</span> Mexico</p>
+        <p>Last Modified: <span id="currentTime"></span></p>
+
+      </div>
     </div>
-</footer>
+  </footer>
 
-
-  <!-- Scripts -->
-  <script src="scripts/directory.js"></script>
+  <!-- Weather API Integration and Spotlight Scripts -->
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/spotlight.js"></script>
   <script>
-    // Set the current year and last modified date
     document.getElementById('currentyear').textContent = new Date().getFullYear();
     document.getElementById('lastModified').textContent = document.lastModified;
 
-    // Hamburger menu functionality
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const navbar = document.getElementById('navbar');
-    const navLinks = navbar.querySelectorAll('a');
 
     hamburgerMenu.addEventListener('click', () => {
       navbar.classList.toggle('active');
     });
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navbar.classList.remove('active');
-      });
-    });
-
-    // Fetch weather data from OpenWeatherMap API
-    const weatherInfo = document.getElementById('weather-info');
-    const forecast = document.getElementById('forecast');
-
-    fetch('https://api.openweathermap.org/data/2.5/forecast?q=Veracruz,MX&units=metric&cnt=4&appid=befd1c66a488e37b45b346e7c2d0d864')
-      .then(response => response.json())
-      .then(data => {
-        const currentWeather = data.list[0];
-        const forecastWeather = data.list.slice(1);
-
-        // Current weather
-        const weatherDescription = currentWeather.weather.map(weather => weather.description.charAt(0).toUpperCase() + weather.description.slice(1)).join(', ');
-        weatherInfo.innerHTML = `
-          <p>Temperature: ${currentWeather.main.temp.toFixed(0)}°C</p>
-          <p>Weather: ${weatherDescription}</p>
-        `;
-
-        // Forecast weather
-        forecast.innerHTML = '<h4>3-Day Forecast</h4>';
-        forecastWeather.forEach(day => {
-          forecast.innerHTML += `
-            <p>${new Date(day.dt * 1000).toLocaleDateString()}: ${day.main.temp.toFixed(0)}°C, ${day.weather[0].description.charAt(0).toUpperCase() + day.weather[0].description.slice(1)}</p>
-          `;
-        });
-      })
-      .catch(error => console.error('Error fetching weather data:', error));
-
-    // Spotlight businesses (Gold and Silver members only)
-    const spotlightCards = document.getElementById('spotlight-cards');
-    fetch('data/index.json')
-      .then(response => response.json())
-      .then(data => {
-        // Filter Gold and Silver members
-        const filteredMembers = data.filter(member => member.membership_level === 'Gold' || member.membership_level === 'Silver');
-
-        // Randomly select 2 or 3 spotlights
-        const spotlightMembers = [];
-        while (spotlightMembers.length < 3 && filteredMembers.length > 0) {
-          const randomIndex = Math.floor(Math.random() * filteredMembers.length);
-          spotlightMembers.push(filteredMembers.splice(randomIndex, 1)[0]);
-        }
-
-        // Display spotlights
-        spotlightMembers.forEach(member => {
-          const card = document.createElement('div');
-          card.className = 'business-card';
-          card.innerHTML = `
-            <img src="${member.image}" alt="${member.name}">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-            <p><strong>Membership:</strong> ${member.membership_level}</p>
-          `;
-          spotlightCards.appendChild(card);
-        });
-      })
-      .catch(error => console.error('Error fetching member data:', error));
   </script>
 </body>
+
 </html>
