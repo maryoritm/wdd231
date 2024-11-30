@@ -21,60 +21,28 @@
 
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.png" type="image/png">
-</head>
 
+<head>
 <body>
   <header>
     <div class="header-content">
       <img src="images/veracruz.webp" alt="Veracruz Chamber of Commerce logo" class="logo">
       <h1>Veracruz Chamber of Commerce</h1>
-      <nav id="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="directory.html">Directory</a></li>
-          <li><a href="join.html">Join</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- Hamburger button for mobile -->
-      <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">
-        &#9776;
-      </button>
     </div>
   </header>
 
   <main>
-
-
-    <section id="hero">
-      <h2>Welcome to the Veracruz Chamber of Commerce</h2>
-      <img src="images/company.webp" alt="Veracruz Chamber of Commerce" class="hero-image">
-      <p>Join us to connect, grow, and succeed in Veracruz.</p>
-      <a href="#join" class="cta-button">Join Now</a>
-   </section>
-   
-
-    <!-- Current Events Section -->
-    <section id="events">
-      <h2>Current Events</h2>
-      <p>Stay tuned for our upcoming business workshops and networking events!</p>
-    </section>
-
-    <!-- Weather Section -->
-    <section id="weather">
-      <h2>Current Weather in Veracruz</h2>
-      <div id="weather-info">
-        <p>Loading weather data...</p>
-      </div>
-    </section>
-
-    <!-- Company Spotlights Section -->
-    <section id="spotlights">
-      <h2>Business Spotlights</h2>
-      <div class="spotlight-cards" id="spotlight-cards">
-        <!-- Dynamically generated member spotlight cards will appear here -->
-      </div>
+    <section id="thank-you">
+      <h2>Thank You for Joining!</h2>
+      <p>We appreciate your application. Here is the information you submitted:</p>
+      <ul>
+        <li>First Name: <span id="first-name"></span></li>
+        <li>Last Name: <span id="last-name"></span></li>
+        <li>Email Address: <span id="email"></span></li>
+        <li>Mobile Number: <span id="mobile"></span></li>
+        <li>Business/Organization Name: <span id="organization"></span></li>
+        <li>Submission Timestamp: <span id="timestamp"></span></li>
+      </ul>
     </section>
   </main>
 
@@ -103,20 +71,30 @@
     </div>
   </footer>
 
-  <!-- Weather API Integration and Spotlight Scripts -->
-  <script src="scripts/weather.js"></script>
-  <script src="scripts/spotlight.js"></script>
   <script>
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
-
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const navbar = document.getElementById('navbar');
-
-    hamburgerMenu.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-    });
+    const queryParams = new URLSearchParams(window.location.search);
+    document.getElementById('first-name').textContent = queryParams.get('first_name');
+    document.getElementById('last-name').textContent = queryParams.get('last_name');
+    document.getElementById('email').textContent = queryParams.get('email');
+    document.getElementById('mobile').textContent = queryParams.get('mobile');
+    document.getElementById('organization').textContent = queryParams.get('organization');
+    document.getElementById('timestamp').textContent = queryParams.get('timestamp');
   </script>
+  <script>
+    // Obtener el año actual y mostrarlo en el span con id "currentyear"
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+  
+    // Obtener la hora actual y formatearla
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const formattedTime = `${hours}:${minutes}:${seconds}`;
+  
+    // Mostrar la hora en el span con id "currentTime"
+    document.getElementById('currentTime').textContent = formattedTime;
+  </script>
+  
 </body>
 
 </html>
