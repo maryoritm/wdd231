@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Veracruz - Chamber of Commerce</title>
+    <meta name="description" content="Discover the beauty and culture of Veracruz.">
+    <meta name="author" content="Maryori Torres">
+
+    <meta property="og:title" content="Discover Veracruz">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/social-share.webp">
+    <meta property="og:url" content="https://veracruzchamber.com/discover.html">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        @media (min-width: 768px) {
+            .gallery figure:hover img {
+                transform: scale(1.05); 
+                transition: transform 0.3s ease-in-out; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/veracruz.webp" alt="Veracruz Chamber of Commerce logo" class="logo">
+            <h1>Discover Veracruz</h1>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger button for mobile -->
+            <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+        </div>
+
+    </header>
+
+    <main class="discover-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div id="visitor-message" class="visitor-message">
+                <!-- Placeholder for dynamic message -->
+            </div>
+            <h2>About Veracruz</h2>
+            <ul>
+                <li>Population: ~500,000</li>
+                <li>Famous for: Coffee, Culture, and Carnival</li>
+                <li>Top Attractions: San Juan de Ulúa, Malecon, Veracruz Aquarium</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="grid-gallery">
+                <figure>
+                    <img data-src="images/photo1.webp" alt="San Juan de Ulúa" class="lazy" loading="lazy" width="300"
+                        height="200">
+                    <figcaption>San Juan de Ulúa</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo2.webp" alt="Veracruz Malecon" class="lazy" loading="lazy" width="300"
+                        height="200">
+                    <figcaption>Veracruz Malecon</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo3.webp" alt="Carnival Parade" class="lazy" loading="lazy" width="300"
+                        height="200">
+                    <figcaption>Carnival Parade</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo4.webp" alt="Aquarium of Veracruz" class="lazy" loading="lazy"
+                        width="300" height="200">
+                    <figcaption>Aquarium of Veracruz</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo5.webp" alt="Veracruz Cathedral" class="lazy" loading="lazy" width="300"
+                        height="200">
+                    <figcaption>Veracruz Cathedral</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo6.webp" alt="Coffee Plantations" class="lazy" loading="lazy" width="300"
+                        height="200">
+                    <figcaption>Coffee Plantations</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <address>
+                    Veracruz Chamber of Commerce<br>
+                    1234 Commerce Blvd, Veracruz, Veracruz 91900
+                </address>
+                <p>Email: info@veracruzchamber.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon"></a>
+                <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon"></a>
+                <a href="https://linkedin.com"><img src="images/linkedin.png" alt="LinkedIn icon"></a>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 Class Project</p>
+                <p>Veracruz Chamber of Commerce</p>
+                <p>&copy; <span id="currentyear"></span> Maryori Torres <span class="flag">🇲🇽</span> Mexico</p>
+                <p>Last Modified: <span id="currentTime"></span></p>
+                <input type="hidden" id="timestamp" value="">
+
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navbar = document.getElementById('navbar');
+        hamburgerMenu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+        // Obtener el año actual y mostrarlo en el span con id "currentyear"
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+
+        // Obtener la hora actual y formatearla
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+        // Mostrar la hora en el span con id "currentTime"
+        document.getElementById('currentTime').textContent = formattedTime;
+    </script>
+
+    <script>
+        // Visitor Message
+        const visitorMessage = document.getElementById('visitor-message');
+        const lastVisit = localStorage.getItem('lastVisit');
+        const currentVisit = Date.now();
+
+        if (lastVisit) {
+            const daysSinceLastVisit = Math.floor((currentVisit - lastVisit) / (1000 * 60 * 60 * 24));
+            if (daysSinceLastVisit < 1) {
+                visitorMessage.textContent = "Back so soon! Awesome!";
+            } else if (daysSinceLastVisit === 1) {
+                visitorMessage.textContent = "You last visited 1 day ago.";
+            } else {
+                visitorMessage.textContent = `You last visited ${daysSinceLastVisit} days ago.`;
+            }
+        } else {
+            visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
+        }
+
+        localStorage.setItem('lastVisit', currentVisit);
+
+        // Lazy Loading Images
+        const lazyImages = document.querySelectorAll('img.lazy');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => observer.observe(img));
+
+        // Current Year
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

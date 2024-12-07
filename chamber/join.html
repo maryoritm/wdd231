@@ -33,10 +33,11 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
           <li><a href="join.html" class="active">Join</a></li>
-          <li><a href="#events">Events</a></li>
+          <li><a href="discover.html">Discover</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
     </div>
   </header>
 
@@ -165,6 +166,14 @@
     document.getElementById('timestamp').value = new Date().toISOString();
   </script>
   <script>
+    document.getElementById('timestamp').value = new Date().toISOString();
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navbar = document.getElementById('navbar');
+    hamburgerMenu.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+
     // Obtener el año actual y mostrarlo en el span con id "currentyear"
     document.getElementById('currentyear').textContent = new Date().getFullYear();
   
