@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A hub for tennis enthusiasts to learn, connect, and improve their game.">
+    <meta name="author" content="Maryori Torres">
+    <meta name="keywords" content="tennis, club, sports, training, tournaments">
+    <meta property="og:title" content="Tennis Enthusiast Club">
+    <meta property="og:description" content="Join our community of tennis lovers!">
+    <meta property="og:image" content="images/tennis-logo.png">
+    <meta property="og:url" content="https://maryoritm.github.io/tennis-club">
+    <title>Contact Us</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="images/tenis.jpg" alt="Tennis action on court" class="hero-image" loading="lazy">
+
+            <div class="logo">Tennis Enthusiast Club</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Tennis Basics</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+    </header>
+    <main>
+        <section id="contact-hero">
+            <h1>Contact Us</h1>
+            <img src="images/tenis5.webp" alt="Tennis action on court" class="hero-image" loading="lazy">
+
+            <p>For any inquiries, please reach out via email, phone, or our social media channels.</p>
+        </section>
+
+        <section id="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>Email:</strong> <a href="mailto:info@tennisclub.com">info@tennisclub.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><strong>Address:</strong> 123 Tennis Court Lane, Sportstown, USA</p>
+        </section>
+
+        <section id="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="thankyou.html" method="GET" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="social-media">
+            <h2>Follow Us</h2>
+            <p>Stay connected through our social media platforms:</p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tennis Enthusiast Club | <a href="attributions.html">Resource Attributions</a><a
+                href="index.html"> | Tennis Enthusiast Club</a> | All Rights Reserved</p>
+
+                <div class="social-icons">
+                    <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" loading="lazy"></a>
+                    <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon" loading="lazy"></a>
+                    <a href="https://twitter.com"><img src="images/twitter.png" alt="LinkedIn icon" loading="lazy"></a>
+                </div>
+
+    <script>
+        // Mobile menu toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

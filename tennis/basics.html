@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A hub for tennis enthusiasts to learn, connect, and improve their game.">
+    <meta name="author" content="Maryori Torres">
+    <meta name="keywords" content="tennis, club, sports, training, tournaments">
+    <meta property="og:title" content="Tennis Enthusiast Club">
+    <meta property="og:description" content="Join our community of tennis lovers!">
+    <meta property="og:image" content="images/tennis-logo.png">
+    <meta property="og:url" content="https://maryoritm.github.io/tennis-club">
+    <title>Tennis Basics</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="images/tenis.jpg" alt="Tennis action on court" class="hero-image" loading="lazy">
+
+            <div class="logo">Tennis Enthusiast Club</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Tennis Basics</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to Tennis Basics</h1>
+            <img src="images/tenis4.webp" alt="Tennis action on court" class="hero-image" loading="lazy">
+
+            <p>Learn the fundamentals of tennis and start your journey in this amazing sport!</p>
+        </section>
+
+        <section id="features">
+            <h2>Why Learn Tennis?</h2>
+            <ul>
+                <li>Improve your physical fitness and coordination.</li>
+                <li>Boost your mental focus and strategic thinking.</li>
+                <li>Enjoy a fun and social activity with friends and family.</li>
+            </ul>
+        </section>
+
+        <section id="rules">
+            <h2>Basic Rules of Tennis</h2>
+            <p>Here are the fundamental rules to get started:</p>
+            <ul>
+                <li>The game starts with a serve. The server must hit the ball diagonally across the net into the
+                    opponent's service box.</li>
+                <li>Points are scored when the opponent fails to return the ball within the court boundaries.</li>
+                <li>A game is won by scoring at least four points with a two-point advantage.</li>
+                <li>Matches can be best of 3 or 5 sets, depending on the competition.</li>
+            </ul>
+        </section>
+
+        <section id="equipment">
+            <h2>Essential Equipment</h2>
+            <p>Before you hit the court, make sure you have the following:</p>
+            <div class="equipment-grid">
+                <div>
+                    <h3>Racquet</h3>
+                    <p>Choose a racquet that suits your skill level and playing style.</p>
+                </div>
+                <div>
+                    <h3>Ball</h3>
+                    <p>Use high-quality tennis balls for better bounce and durability.</p>
+                </div>
+                <div>
+                    <h3>Shoes</h3>
+                    <p>Wear tennis-specific shoes to enhance movement and avoid injuries.</p>
+                </div>
+                <div>
+                    <h3>Clothing</h3>
+                    <p>Comfortable, breathable clothing is ideal for playing tennis.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tennis Enthusiast Club | <a href="attributions.html">Resource Attributions</a><a
+                href="index.html"> | Tennis Enthusiast Club</a> | All Rights Reserved</p>
+
+                <div class="social-icons">
+                    <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" loading="lazy"></a>
+                    <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon" loading="lazy"></a>
+                    <a href="https://twitter.com"><img src="images/twitter.png" alt="LinkedIn icon" loading="lazy"></a>
+                </div>
+
+    <script>
+        // Mobile menu toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

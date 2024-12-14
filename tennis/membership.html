@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A hub for tennis enthusiasts to learn, connect, and improve their game.">
+    <meta name="author" content="Maryori Torres">
+    <meta name="keywords" content="tennis, club, sports, training, tournaments">
+    <meta property="og:title" content="Tennis Enthusiast Club">
+    <meta property="og:description" content="Join our community of tennis lovers!">
+    <meta property="og:image" content="images/tennis-logo.png">
+    <meta property="og:url" content="https://maryoritm.github.io/tennis-club">
+    <title>Membership</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="images/tenis.jpg" alt="Tennis action on court" class="hero-image" loading="lazy">
+
+            <div class="logo">Tennis Enthusiast Club</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Tennis Basics</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+    </header>
+    <main>
+        <section id="membership-hero">
+            <h1>Membership</h1>
+            <img src="images/tenis6.webp" alt="Tennis action on court" class="hero-image" loading="lazy">
+
+            <p>Join today and gain access to exclusive content, training, and community events!</p>
+        </section>
+
+        <section id="membership-benefits">
+            <h2>Membership Benefits</h2>
+            <ul>
+                <li>Access to exclusive tennis training resources.</li>
+                <li>Discounts on club events and tournaments.</li>
+                <li>Priority booking for courts and workshops.</li>
+                <li>Access to member-only newsletters and updates.</li>
+            </ul>
+        </section>
+
+        <section id="membership-plans">
+            <h2>Membership Plans</h2>
+            <div class="plans-container">
+                <div class="plan-card">
+                    <h3>Basic Membership</h3>
+                    <p>Price: $10/month</p>
+                    <p>Includes access to newsletters and club updates.</p>
+                    <button>Sign Up</button>
+                </div>
+                <div class="plan-card">
+                    <h3>Premium Membership</h3>
+                    <p>Price: $25/month</p>
+                    <p>Includes all basic benefits plus discounts on events and training resources.</p>
+                    <button>Sign Up</button>
+                </div>
+                <div class="plan-card">
+                    <h3>Elite Membership</h3>
+                    <p>Price: $50/month</p>
+                    <p>All benefits included, plus priority bookings and exclusive content.</p>
+                    <button>Sign Up</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tennis Enthusiast Club | <a href="attributions.html">Resource Attributions</a><a
+                href="index.html"> | Tennis Enthusiast Club</a> | All Rights Reserved</p>
+
+                <div class="social-icons">
+                    <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" loading="lazy"></a>
+                    <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon" loading="lazy"></a>
+                    <a href="https://twitter.com"><img src="images/twitter.png" alt="LinkedIn icon" loading="lazy"></a>
+                </div>
+
+    <script>
+        // Mobile menu toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

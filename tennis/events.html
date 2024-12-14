@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A hub for tennis enthusiasts to learn, connect, and improve their game.">
+    <meta name="author" content="Maryori Torres">
+    <meta name="keywords" content="tennis, club, sports, training, tournaments">
+    <meta property="og:title" content="Tennis Enthusiast Club">
+    <meta property="og:description" content="Join our community of tennis lovers!">
+    <meta property="og:image" content="images/tennis-logo.png">
+    <meta property="og:url" content="https://maryoritm.github.io/tennis-club">
+    <title>Events</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="images/tenis.jpg" alt="Tennis action on court" class="hero-image" loading="lazy">
+
+            <div class="logo">Tennis Enthusiast Club</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Tennis Basics</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Upcoming Events</h1>
+            <img src="images/tenis2.jpg" alt="Tennis action on court" class="hero-image" loading="lazy">
+            <p>Join us for exciting tennis events and tournaments!</p>
+        </section>
+
+        <section id="events">
+            <div id="events-container" class="events-grid">
+                <!-- Dynamic content will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tennis Enthusiast Club | <a href="attributions.html">Resource Attributions</a><a
+                href="index.html"> | Tennis Enthusiast Club</a> | All Rights Reserved</p>
+
+        <div class="social-icons">
+            <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" loading="lazy"></a>
+            <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon" loading="lazy"></a>
+            <a href="https://twitter.com"><img src="images/twitter.png" alt="LinkedIn icon" loading="lazy"></a>
+        </div>
+
+        <script>
+            // Mobile menu toggle
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Events data (simulate fetching from a server)
+            const events = [
+                {
+                    title: "Spring Tennis Tournament",
+                    date: "April 15, 2025",
+                    location: "City Sports Arena",
+                    description: "Compete with the best and showcase your skills!"
+                },
+                {
+                    title: "Kids Tennis Workshop",
+                    date: "May 10, 2025",
+                    location: "Community Park",
+                    description: "A fun and engaging workshop for kids to learn tennis."
+                },
+                {
+                    title: "Summer Night Doubles",
+                    date: "June 20, 2025",
+                    location: "Downtown Tennis Club",
+                    description: "An exciting doubles match under the summer sky."
+                }
+            ];
+
+            // Populate events
+            const eventsContainer = document.getElementById('events-container');
+            if (events.length > 0) {
+                events.forEach(event => {
+                    const eventCard = document.createElement('div');
+                    eventCard.classList.add('event-card');
+                    eventCard.innerHTML = `
+                    <h3>${event.title}</h3>
+                    <p><strong>Date:</strong> ${event.date}</p>
+                    <p><strong>Location:</strong> ${event.location}</p>
+                    <p>${event.description}</p>
+                `;
+                    eventsContainer.appendChild(eventCard);
+                });
+            } else {
+                eventsContainer.innerHTML = '<p>No events scheduled at the moment. Stay tuned for updates!</p>';
+            }
+        </script>
+</body>
+
+</html>

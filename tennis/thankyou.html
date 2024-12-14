@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <meta name="description" content="Thank you for contacting us!">
+    <meta name="author" content="Maryori Torres">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+          <img src="images/tenis.jpg" alt="Tennis action on court" class="hero-image" loading="lazy">
+
+            <div class="logo">Tennis Enthusiast Club</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Tennis Basics</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="thank-you">
+            <h2>Thank You for Contacting Us!</h2>
+            <p>We appreciate your message. Here is the information you submitted:</p>
+            <ul>
+                <li>Name: <span id="name"></span></li>
+                <li>Email: <span id="email"></span></li>
+                <li>Message: <span id="message"></span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Tennis Enthusiast Club | <a href="attributions.html">Resource Attributions</a><a
+              href="index.html"> | Tennis Enthusiast Club</a> | All Rights Reserved</p>
+
+              <div class="social-icons">
+                <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" loading="lazy"></a>
+                <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon" loading="lazy"></a>
+                <a href="https://twitter.com"><img src="images/twitter.png" alt="LinkedIn icon" loading="lazy"></a>
+            </div>
+
+    <script>
+        const queryParams = new URLSearchParams(window.location.search);
+        document.getElementById('name').textContent = queryParams.get('name');
+        document.getElementById('email').textContent = queryParams.get('email');
+        document.getElementById('message').textContent = queryParams.get('message');
+    </script>
+</body>
+
+</html>
